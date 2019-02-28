@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>超级英雄</title>
+    <link rel="stylesheet" href="./static/plugins/Jcrop/jquery.Jcrop.min.css">
+    <!--<link rel="stylesheet" href="./static/plugins/cropper.min.css">-->
+    <script src="./static/plugins/html2canvas.js"></script>
+    <script src="./static/plugins/device.min.js"></script>
+    <!--<script src="./static/plugins/jquery-2.1.1.js"></script>-->
+    <!--<script src="./static/plugins/cropper.min.js"></script>-->
+    <!--<script src="src/assets/js/cropper.min.js"></script>-->
+    <script src="./static/plugins/exif.js"></script>
+    <script src="./static/plugins/canvas2image.js"></script>
+    <script src="https://unpkg.com/alloylever@1.0.3/alloy-lever.js"></script>
+    <!--<script src="./static/plugins/canvasResize.js"></script>-->
+    <script>
+      AlloyLever.config({
+        cdn:'//s.url.cn/qqun/qun/qqweb/m/qun/confession/js/vconsole.min.js',  //vconsole的CDN地址
+        reportUrl: "//a.qq.com",  //错误上报地址
+        reportPrefix: 'qun',    //错误上报msg前缀，一般用于标识业务类型
+        reportKey: 'msg',        //错误上报msg前缀的key，用户上报系统接收存储msg
+        otherReport: {              //需要上报的其他信息
+          uin: 491862102
+        },
+        entry:"#entry"          //请点击这个DOM元素6次召唤vConsole。//你可以通过AlloyLever.entry('#entry2')设置多个机关入口召唤神龙
+      })
+      console.log(document.documentElement.clientWidth);
+      document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+
+    </script>
+  </head>
+  <body>
+    <audio id="music" src="static/music/music.mp3" loop="loop" preload="load" style="display: none"></audio>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
